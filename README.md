@@ -12,4 +12,4 @@ npm install or yarn
 
 ## start
 
-npm start or start
+npm start or yarn start
