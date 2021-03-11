@@ -4,7 +4,7 @@ Made with node.js, redux.
 
 Babel is used for ES6 syntax.
 
-API read files from /public path.
+API read files from src/public path.
 
 ## Install
 
