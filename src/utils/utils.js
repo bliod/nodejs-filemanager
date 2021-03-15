@@ -16,10 +16,13 @@ export const findAndUpdate = (files) => {
     state.forEach(element => {
         let found = files.find(val => val === element.name)
         if (!found) {
-            store.dispatch(update(element.name))
+            if (element.active) {
+                console.log('dispatch', element.name)
+                store.dispatch(update(element.name))
+            }
         } else {
-            //if state and file match but active is false
             if (!element.active) {
+                console.log('dispatch to true', element.name)
                 store.dispatch(update(element.name))
             }
         }
