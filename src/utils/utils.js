@@ -1,14 +1,5 @@
 import store from '../store/store.js';
 import { update, add } from '../actions/actions';
-import fs from 'fs';
-
-export const initialState = (path) => {
-    const files = fs.readdir(path, (err, files) => {
-        files.forEach(file => {
-            store.dispatch({ type: 'ADD', payload: { name: file, active: true } })
-        });
-    });
-}
 
 export const findAndAdd = (files) => {
     let state = store.getState();

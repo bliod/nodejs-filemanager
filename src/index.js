@@ -8,7 +8,8 @@ const app = express()
 const port = 3000
 const currentPath = path.resolve(__dirname, '../public');
 
-initialState(currentPath)
+const dirFiles = fs.readdirSync(currentPath);
+findAndAdd(dirFiles)
 
 app.get('/', (req, res) => {
     res.send('ok')
