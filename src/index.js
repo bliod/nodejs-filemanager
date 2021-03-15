@@ -28,11 +28,11 @@ app.get('/scan', (req, res) => {
     res.json(state)
 })
 
-app.get('/download-state', async (req, res) => {
+app.get('/download-state', (req, res) => {
+    res.setHeader('Content-disposition', 'attachment; filename= state.json');
+    res.setHeader('Content-type', 'application/json');
     let state = store.getState();
-    await fs.writeFileSync(path.resolve(__dirname, 'stateObject.txt'), JSON.stringify(state))
-    const file = `${__dirname}/stateObject.txt`;
-    res.download(file)
+    res.json(state)
 });
 
 app.listen(port, () => {
