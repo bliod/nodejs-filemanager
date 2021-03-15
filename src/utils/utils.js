@@ -26,6 +26,11 @@ export const findAndUpdate = (files) => {
         let found = files.find(val => val === element.name)
         if (!found) {
             store.dispatch(update(element.name))
+        } else {
+            //if state and file match but active is false
+            if (!element.active) {
+                store.dispatch(update(element.name))
+            }
         }
     });
 }

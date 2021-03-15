@@ -1,1 +1,1 @@
-[{"name":"a","active":true},{"name":"test.jpg","active":true},{"name":"test1.jpg","active":true},{"name":"assa","active":false}]
+[{"name":"test.jpg","active":true},{"name":"test1.jpg","active":true},{"name":"as","active":false}]

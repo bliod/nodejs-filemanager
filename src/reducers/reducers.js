@@ -6,7 +6,8 @@ export const counter = (state = [], action) => {
         case 'UPDATE':
             const currentState = [...state];
             let idx = currentState.findIndex(el => el.name === action.target)
-            currentState[idx].active = false;
+            let isActive = currentState[idx].active;
+            currentState[idx].active = !isActive;
             return currentState
         default:
             return state
