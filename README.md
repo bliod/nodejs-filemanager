@@ -18,6 +18,12 @@ API read files from src/public path.
 
 npm install or yarn
 
-## start
+## Development
 
-npm start or yarn start
+npm run dev or yarn dev
+
+## Start
+
+npm run build && npm run start 
+
+or yarn build && yarn start

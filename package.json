@@ -6,10 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js --exec babel-node",
-    "start": "node src/index.js --exec babel-node",
-    "clear": "rm -rf dist && mkdir dist"
+    "clear": "del -rf dist && mkdir dist",
+    "build": "npm run clear && babel src -d dist",
+    "start": "node dist/index.js"
   },
-  "author": "",
+  "author": "Karolis Bliodnieks",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
